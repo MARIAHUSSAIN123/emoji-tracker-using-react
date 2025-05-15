@@ -86,14 +86,41 @@ h1 {
   }
 }
 
-
 @keyframes bodyAnimation {
   0% { background-color: #85c6ff; }
   100% { background-color: #a0e1f5; }
 }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+    padding: 20px;
   }
 
-  
+  .emoji-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .emoji-container button {
+    padding: 15px;
+    font-size: 1.8rem;
+  }
+
+  .mood-display {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .emoji-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+
+  .emoji-container button {
+    padding: 12px;
+    font-size: 1.5rem;
+  }
+}
